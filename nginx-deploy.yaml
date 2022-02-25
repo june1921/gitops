@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nginx-deploy
 spec:
-  replicas: 2
+  replicas: 4 
   selector:
     matchLabels:
       run: nginx-deploy
@@ -13,7 +13,7 @@ spec:
         run: nginx-deploy
     spec:
       containers:
-      - image: zone1921/test:web
+      - image: zone1921/test:html
         name: test
         ports:
         - containerPort: 80
